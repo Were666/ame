@@ -1,0 +1,257 @@
+<form class="{{cssClass}} {{actor.type}} flexcol custom-system-actor" autocomplete="off">
+	<div class="custom-system-actor-content">
+
+		{{!-- Sheet Header --}}
+		<header class="sheet-header" style="padding-bottom: 8rem">
+			<div class="profile-img-container" style="width: 128px; height: 128px; flex: 0 0 128px">
+                <img class="profile-img" src="{{actor.img}}" data-edit="img" title="{{actor.name}}" />
+            </div>
+	
+			<div class="header-fields">
+                <h1 class="charname" style="position: relative; margin-left: 1.25rem; top: 0.5rem;">
+                    <input name="name" type="text" value="{{actor.name}}" placeholder="{{localize 'AME.Base.Name'}}" style="border: 0; background-color: transparent; "/>
+                </h1>
+				
+				<div class="custom-system-customHeader">
+					<div class="custom-system-component-contents custom_header custom-system-component-root custom-system-panel">
+					
+						{{!-- Primera linea --}}
+						<div class="custom-system-component-contents border: 0 custom-system-component-root flexrow flex-group-left custom-system-panel">
+							<div class="custom-system-component-contents custom-system-component-root flex-group-left custom-system-panel flex3">
+								<div class="custom-system-component-contents AME_class_label custom-system-component-root custom-system-field custom-system-field-root custom-system-field-full-size">
+									<b class="custom-system-label-root">
+										<div class="custom-system-label-icons"></div>
+										<div class="custom-system-label custom-system-label-bold" data-value="Clase" data-name="AME_class_label">
+											{{localize 'AME.Base.Class'}}
+										</div>
+									</b>
+								</div>
+								<div class="custom-system-component-contents AME_class_select custom-system-component-root custom-system-field custom-system-field-root custom-system-field-full-size custom-system-select">
+									<select id="Actor.A6le3ibvmL3Ti71T-AME_class_select" class="selectrace" name="system.race.value" data-type="String">
+										{{#select actor.system.race.value}}
+											{{#each actor.system.races as |race key|}}
+												<option value="{{key}}">{{localize (lookup @root.config.races key)}}</option>
+											{{/each}}
+										{{/select}}
+									</select>
+								</div>
+							</div>
+							<div class="custom-system-component-contents custom-system-component-root flex-group-left custom-system-panel flex1">
+								<div class="custom-system-component-contents AME_level_label custom-system-component-root custom-system-field custom-system-field-root custom-system-field-full-size">
+									<b class="custom-system-label-root">
+										<div class="custom-system-label-icons"></div>
+										<div class="custom-system-label custom-system-label-bold" data-value="Nivel" data-name="AME_level_label">
+											{{localize 'AME.Base.Level'}}
+										</div>
+									</b>
+								</div>
+								<div class="custom-system-component-contents AME_level_text custom-system-component-root custom-system-field custom-system-field-root custom-system-field-small custom-system-number-field">
+									<input type="text" id="Actor.A6le3ibvmL3Ti71T-AME_level_text" class="level" name="system.attributes.level.value" value="{{system.attributes.level.value}}" data-dtype="Number" />
+								</div>
+							</div>
+							<div class="custom-system-component-contents custom-system-component-root flex-group-left custom-system-panel flex1">
+								<div class="custom-system-component-contents AME_xp_label custom-system-component-root custom-system-field custom-system-field-root custom-system-field-full-size">
+									<b class="custom-system-label-root">
+										<div class="custom-system-label-icons"></div>
+										<div class="custom-system-label custom-system-label-bold" data-value="PX" data-name="AME_xp_label">
+											{{localize 'AME.Base.XP'}}
+										</div>
+									</b>
+								</div>
+								<div class="custom-system-component-contents AME_xp_text custom-system-component-root custom-system-field custom-system-field-root custom-system-field-small custom-system-number-field">
+									<input type="text" id="Actor.A6le3ibvmL3Ti71T-AME_xp_text" name="system.px" value="{{system.px}}" data-dtype="Number" />
+								</div>
+							</div>
+						</div>
+						{{!-- Fin primera linea --}}
+						
+						{{!-- Segunda linea --}}
+						<div class="custom-system-component-contents custom-system-component-root flexrow flex-group-left custom-system-panel">
+							<div class="custom-system-component-contents custom-system-component-root flex-group-left custom-system-panel">
+								<div class="custom-system-component-contents custom-system-component-root custom-system-field custom-system-field-root custom-system-field-full-size">
+									<b class="custom-system-label-root">
+										<div class="custom-system-label-icons"></div>
+										<div class="custom-system-label custom-system-label-bold" data-value="Alineamiento" data-name="AME_alignment_label">
+											{{localize 'AME.Base.Alignment'}}
+										</div>
+									</b>
+								</div>
+								<div class="custom-system-component-contents custom-system-component-root custom-system-field custom-system-field-root custom-system-field-full-size">
+									<input type="text" id="Actor.A6le3ibvmL3Ti71T-AME_alignment_text" name="system.alignment" value="{{system.alignment}}" data-dtype="String" />
+								</div>
+							</div>
+							<div class="custom-system-component-contents custom-system-component-root flex-group-center custom-system-panel">
+								<div class="custom-system-component-contents custom-system-component-root custom-system-field custom-system-field-root custom-system-field-full-size">
+									<b class="custom-system-label-root">
+										<div class="custom-system-label-icons"></div>
+										<div class="custom-system-label custom-system-label-bold" data-value="Movimiento" data-name="AME_movement_label">
+											{{localize 'AME.Base.Movement'}}
+										</div>
+									</b>
+								</div>
+								<div class="custom-system-component-contents custom-system-component-root custom-system-field custom-system-field-root custom-system-field-full-size">
+									<span class="custom-system-label-root">
+										<div class="custom-system-label-icons"></div>
+										<div class="custom-system-label custom-system-label-label movementText" data-value="AME_movement_text" data-name="AME_movement_text">
+											{{system.movement.base}}
+										</div>
+									</span>
+								</div>
+							</div>
+							
+							{{!-- Cambio iniciativa por pg --}}
+							<div class="custom-system-component-contents custom-system-component-root flex-group-center custom-system-panel">
+								<div class="custom-system-component-contents custom-system-component-root custom-system-field custom-system-field-root custom-system-field-full-size">
+									<b class="custom-system-label-root">
+										<div class="custom-system-label-icons"></div>
+										<div class="custom-system-label custom-system-label-bold rollable" data-value="Iniciativa" data-name="AME_initiative_label" data-roll="1d6+@abilities.dex.mod" data-label="{{localize 'AME.Base.Initiative'}}">
+											{{localize 'AME.Base.Initiative'}}
+										</div>
+									</b>
+								</div>
+								<div class="custom-system-component-contents custom-system-component-root custom-system-field custom-system-field-root custom-system-field-full-size">
+									<span class="custom-system-label-root">
+										<div class="custom-system-label-icons"></div>
+										<div class="custom-system-label custom-system-label-label" data-value="{{system.initiative.value}}" data-name="AME_initiative_text">
+											{{system.initiative.value}}
+										</div>
+									</span>
+								</div>
+							</div>
+							
+							
+							
+							
+						</div>
+						{{!-- Fin segunda linea --}}
+						
+						{{!-- Tercera linea --}}
+						<div class="custom-system-component-contents custom-system-component-root flexrow flex-group-left custom-system-panel">
+							<div class="custom-system-component-contents custom-system-component-root flex-group-left custom-system-panel">
+								<div class="custom-system-component-contents custom-system-component-root custom-system-field custom-system-field-root custom-system-field-full-size">
+									<b class="custom-system-label-root">
+										<div class="custom-system-label-icons"></div>
+										<div class="custom-system-label custom-system-label-bold" data-value="ca" data-name="AME_ca_label">
+											CA
+										</div>
+									</b>
+								</div>
+								<div class="custom-system-component-contents custom-system-component-root custom-system-field custom-system-field-root custom-system-field-small">
+									<input type="text" id="Actor.A6le3ibvmL3Ti71T-AME_ca_text" name="system.ca.value" value="{{system.ca.value}}" data-dtype="Number" />
+								</div>
+							</div>
+							
+							{{!-- Con escudo? (poner -1 si hay escudo (WIP) --}}
+							<div class="custom-system-component-contents custom-system-component-root flex-group-left custom-system-panel">
+								<div class="custom-system-component-contents custom-system-component-root custom-system-field custom-system-field-root custom-system-field-full-size">
+									<b class="custom-system-label-root">
+										<div class="custom-system-label-icons"></div>
+										<div class="custom-system-label custom-system-label-bold" data-value="ca" data-name="AME_ca_label">
+											{{localize 'AME.Base.Shield'}}
+										</div>
+									</b>
+								</div>
+								<div class="custom-system-component-contents custom-system-component-root custom-system-field custom-system-field-root custom-system-field-small">
+									<input type="text" id="Actor.A6le3ibvmL3Ti71T-AME_ca_text" name="system.power.value" value="{{system.power.value}}" data-dtype="Number" />
+								</div>
+							</div>
+							
+							<div class="custom-system-component-contents custom-system-component-root flex-group-left custom-system-panel">
+								<div class="custom-system-component-contents custom-system-component-root custom-system-field custom-system-field-root custom-system-field-full-size">
+									<b class="custom-system-label-root">
+										<div class="custom-system-label-icons"></div>
+										<div class="custom-system-label custom-system-label-bold rollable" data-value="{{system.health.value}}" data-name="AME_pg_label" data-roll="@dg + @abilities.con.mod + @health.max" data-label="{{localize 'AME.Base.PG'}}">
+										{{!-- <div class="custom-system-label custom-system-label-bold" data-value="{{system.health.value}}" data-name="AME_pg_label"> --}}
+											{{localize 'AME.Base.PG'}}
+										</div>
+									</b>
+								</div>							
+								<div class="custom-system-component-contents custom-system-component-root custom-system-field custom-system-field-root custom-system-field-full-size">
+								    <input type="text" name="system.health.value" value="{{system.health.value}}" data-dtype="Number" style="width: 4em;"/>
+									<span style="margin-left: .5rem; margin-right: .5rem;"> / </span>
+									<span class="custom-system-label-root">
+										<div class="custom-system-label-icons"></div>
+										<div class="custom-system-label custom-system-label-label" data-value="{{system.health.max}}" data-name="AME_pg_max">
+											{{system.health.max}}
+										</div>
+									</span>
+								
+									{{!-- <input type="text" name="system.health.max" value="{{system.health.max}}" data-dtype="Number"/> --}}
+								</div>
+							</div>
+							
+							
+							
+						</div>
+						{{!-- Fin tercera linea --}}
+					</div>
+				</div>
+			</div>
+		</header>
+
+		{{!-- Implementar el nav del original --}}
+		{{!-- Sheet Tab Navigation --}}
+		<nav class="sheet-tabs tabs" data-group="primary">
+			{{!-- Default tab is specified in actor-sheet.mjs --}}
+			<a class="item" data-tab="features">Features</a>
+			<a class="item" data-tab="description">Description</a>
+			<a class="item" data-tab="items">Items</a>
+			<a class="item" data-tab="spells">Spells</a>
+			<a class="item" data-tab="effects">Effects</a>
+		</nav>
+
+  		{{!-- Sheet Body --}}
+  		<section class="sheet-body">
+
+    		{{!-- Owned Features Tab --}}
+    		<div class="tab features" data-group="primary" data-tab="features">
+      			<section class="grid grid-3col">
+        			<aside class="sidebar">
+
+						{{!-- The grid classes are defined in scss/global/_grid.scss. To use,
+						use both the "grid" and "grid-Ncol" class where "N" can be any number
+						from 1 to 12 and will create that number of columns.  --}}
+          				<div class="abilities flexcol">
+            				{{#each system.abilities as |ability key|}}
+            					<div class="ability flexrow flex-group-center">
+              						<label for="system.abilities.{{key}}.value" class="resource-label rollable flexlarge align-left" data-roll="d20+@abilities.{{key}}.mod" data-label="{{localize (lookup @root.config.abilities key)}}">{{localize (lookup @root.config.abilities key)}}</label>
+              						<input type="text" name="system.abilities.{{key}}.value" value="{{ability.value}}" data-dtype="Number"/>
+              						<span class="ability-mod rollable" data-roll="d20+@abilities.{{key}}.mod" data-label="{{localize (lookup @root.config.abilities key)}}">{{numberFormat ability.mod decimals=0 sign=true}}</span>
+            					</div>
+            				{{/each}}
+          				</div>
+        			</aside>
+
+        			{{!-- For the main features list, span the right two columns --}}
+        			<section class="main grid-span-2">
+          				{{!-- This is a Handlebars partial. They're stored in the `/parts` folder next to this sheet, and defined in module/helpers/templates.mjs --}}
+          				{{> "systems/ame/templates/actor/parts/actor-features.hbs"}}
+        			</section>
+
+      			</section>
+    		</div>
+
+    		{{!-- Biography Tab --}}
+    		<div class="tab biography" data-group="primary" data-tab="description">
+      			{{!-- Editors must receive enriched text data from getData to properly handle rolls --}}
+      			{{editor enrichedBiography target="system.biography" engine="prosemirror" button=true editable=editable}}
+    		</div>
+
+    		{{!-- Owned Items Tab --}}
+    		<div class="tab items" data-group="primary" data-tab="items">
+       			{{> "systems/ame/templates/actor/parts/actor-items.hbs"}}
+    		</div>
+
+    		{{!-- Owned Spells Tab --}}
+    		<div class="tab spells" data-group="primary" data-tab="spells">
+      			{{> "systems/ame/templates/actor/parts/actor-spells.hbs"}}
+    		</div>
+
+    		{{!-- Active Effects Tab --}}
+    		<div class="tab effects flexcol" data-group="primary" data-tab="effects">
+      			{{> "systems/ame/templates/actor/parts/actor-effects.hbs"}}
+    		</div>
+
+  		</section>
+	</div>
+</form>

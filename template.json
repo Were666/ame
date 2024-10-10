@@ -1,0 +1,152 @@
+{
+  "Actor": {
+    "types": ["character", "npc"],
+    "templates": {
+      "base": {
+        "health": {
+		  "base": 0,
+          "value": 0,
+          "max": 0
+        },
+        "power": {
+          "value": 5,
+          "min": 0,
+          "max": 5
+        },
+		"px": 0,
+		"alignment": "",
+		"ca": {
+          "value": 10,
+		  "mod": 0
+        },
+		"movement": {
+          "base": 30
+        },
+		"initiative": {
+          "value": 0,
+          "mod": 0
+        },
+		"dg": ""
+      }
+    },
+    "character": {
+      "templates": ["base"],
+      "attributes": {
+        "level": {
+          "value": 1
+        }
+      },
+	  "biography": "",
+      "abilities": {
+        "str": {
+          "value": 10,
+		  "mod": 0
+        },
+        "dex": {
+          "value": 10,
+		  "mod": 0
+        },
+        "con": {
+          "value": 10,
+		  "mod": 0
+        },
+        "int": {
+          "value": 10,
+		  "mod": 0
+        },
+        "wis": {
+          "value": 10,
+		  "mod": 0
+        },
+        "cha": {
+          "value": 10,
+		  "mod": 0
+        }
+      },
+      "race": {
+        "value": "",
+        "label": "Race",
+		"movement": {
+			"value": ""
+		}
+      },
+      "races": {
+        "defaultOption": {
+          "label": "Class",
+		  "dg": "",
+          "dtype": "String"
+        },
+        "cleric": {
+          "label": "Cleric",
+		  "dg": "1d6",
+          "dtype": "String"
+        },
+        "elf": {
+          "label": "Elf",
+		  "dg": "1d6",
+          "dtype": "String"
+        },
+        "dwarf": {
+          "label": "Dwarf",
+		  "dg": "1d8",
+          "dtype": "String"
+        },
+        "explorer": {
+          "label": "Explorer",
+		  "dg": "1d8",
+          "dtype": "String"
+        },
+        "warrior": {
+          "label": "Warrior",
+		  "dg": "1d8",
+          "dtype": "String"
+        },
+        "halfling": {
+          "label": "Halfling",
+		  "dg": "1d6",
+          "dtype": "String"
+        },
+        "thief": {
+          "label": "Thief",
+		  "dg": "1d4",
+          "dtype": "String"
+        },
+        "wizard": {
+          "label": "Wizard",
+		  "dg": "1d4",
+          "dtype": "String"
+        },
+        "paladin": {
+          "label": "Paladin",
+		  "dg": "1d8",
+          "dtype": "String"
+        }
+	  }
+    },
+    "npc": {
+      "templates": ["base"],
+      "cr": 0
+    }
+  },
+  "Item": {
+    "types": ["item", "feature", "spell"],
+    "templates": {
+      "base": {
+        "description": ""
+      }
+    },
+    "item": {
+      "templates": ["base"],
+      "quantity": 1,
+      "weight": 0,
+      "formula": "d20 + @str.mod + ceil(@lvl / 2)"
+    },
+    "feature": {
+      "templates": ["base"]
+    },
+    "spell": {
+      "templates": ["base"],
+      "spellLevel": 1
+    }
+  }
+}

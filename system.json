@@ -1,0 +1,42 @@
+{
+  "id": "ame",
+  "title": "Aventuras en la Marca del Este",
+  "description": "Sistema Aventuras en la Marca del Este para FoundryVTT",
+  "authors": [
+    {
+      "name": "Were",
+      "discord": "",
+      "flags": {}
+    }
+  ],
+  "url": "https://github.com/Were666/ame.git",
+  "license": "LICENSE.txt",
+  "readme": "README.md",
+  "changelog": "CHANGELOG.md",
+  "version": "1.0.0",
+  "compatibility": {
+    "minimum": 11,
+    "verified": "11.315"
+  },
+  "esmodules": ["module/ame.mjs"],
+  "styles": ["css/ame.css"],
+  "languages": [
+    {
+      "lang": "en",
+      "name": "English",
+      "path": "lang/en.json"
+    },
+    {
+      "lang": "es",
+      "name": "Spanish",
+      "path": "lang/es.json"
+    }
+  ],
+  "packs": [],
+  "packFolders": [],
+  "socket": false,
+  "manifest": "https://raw.githubusercontent.com/Were666/ame/main/system.json",
+  "download": "https://github.com/Were666/ame/archive/1.0.0.zip",
+  "gridDistance": 1,
+  "gridUnits": "m"
+}

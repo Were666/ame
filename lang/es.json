@@ -1,0 +1,64 @@
+{ 
+  "AME": {
+    "Base": {
+      "Name": "Nombre",
+      "Class": "Clase",
+      "Level": "Nivel",
+      "XP": "PX",
+      "Alignment": "Alineamiento",
+      "Movement": "Movimiento",
+      "Initiative": "Iniciativa",
+	  "Shield": "Con escudo",
+	  "PG": "Puntos de golpe"
+    },
+    "Races": {
+      "DefaultOption": "Clase",
+      "Cleric": "Clérigo",
+      "Elf": "Elfo",
+      "Dwarf": "Enano",
+      "Explorer": "Explorador",
+      "Warrior": "Guerrero",
+      "Halfling": "Halfling",
+      "Wizard": "Mago",
+      "Thief": "Ladrón",
+      "Paladin": "Paladín"
+    },
+    "Ability": {
+      "Str": { "long": "Fuerza", "abbr": "FUE" },
+      "Con": { "long": "Constitución", "abbr": "CON" },
+      "Dex": { "long": "Destreza", "abbr": "DES" },
+      "Int": { "long": "Inteligencia", "abbr": "INT" },
+      "Wis": { "long": "Sabiduría", "abbr": "SAB" },
+      "Cha": { "long": "Carisma", "abbr": "CAR" }
+    },
+    "SheetLabels": {
+      "Actor": "ame Actor Sheet",
+      "Item": "ame Item Sheet"
+    },
+    "Item": {
+      "Spell": {
+        "SpellLVL": "Level {level} Spells",
+        "AddLVL": "Add LVL {level}"
+      }
+    },
+    "Effect": {
+      "Source": "Source",
+      "Toggle": "Toggle Effect",
+      "Temporary": "Temporary Effects",
+      "Passive": "Passive Effects",
+      "Inactive": "Inactive Effects"
+    }
+  },
+
+  "TYPES": {
+    "Actor": {
+      "character": "Character",
+      "npc": "NPC"
+    },
+    "Item": {
+      "item": "Item",
+      "feature": "Feature",
+      "spell": "Spell"
+    }
+  }
+}
